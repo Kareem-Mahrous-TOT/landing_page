@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tot_atomic_design/tot_atomic_design.dart';
+import 'package:tot_landing_page_widgets/core/routes/router_paths.dart';
 import 'package:tot_landing_page_widgets/core/theme/pallete.dart';
-import 'package:tot_landing_page_widgets/view/screens/components/categories.dart';
-import 'package:tot_landing_page_widgets/view/screens/components/featured_products.dart';
-import 'package:tot_landing_page_widgets/view/screens/components/new_arrivals.dart';
-import 'package:tot_landing_page_widgets/view/screens/components/promotion.dart';
-import 'package:tot_landing_page_widgets/view/screens/components/try_now.dart';
+
+import '../components/landing_comps/new_arrivals.dart';
+import '../components/landing_comps/categories.dart';
+import '../components/landing_comps/featured_products.dart';
+import '../components/landing_comps/promotion.dart';
+import '../components/landing_comps/try_now.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -75,7 +78,12 @@ class LandingPage extends StatelessWidget {
                 buttonChildrenColor: Colors.white,
                 buttonColor: black,
                 tryNowColor: black,
-              )
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    context.push(RoutePaths.contentPage);
+                  },
+                  child: const Text("Content Pages"))
             ],
           ),
         ),
