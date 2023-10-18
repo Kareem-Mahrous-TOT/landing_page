@@ -4,6 +4,7 @@ import 'package:tot_landing_page_widgets/core/theme/pallete.dart';
 import 'package:tot_landing_page_widgets/view/screens/components/categories.dart';
 import 'package:tot_landing_page_widgets/view/screens/components/featured_products.dart';
 import 'package:tot_landing_page_widgets/view/screens/components/new_arrivals.dart';
+import 'package:tot_landing_page_widgets/view/screens/components/promotion.dart';
 import 'package:tot_landing_page_widgets/view/screens/components/try_now.dart';
 
 class LandingPage extends StatelessWidget {
@@ -29,10 +30,22 @@ class LandingPage extends StatelessWidget {
                     imagePath:
                         "https://alkhbaz.totplatform.net/assets/catalog/0a841/8009/8009.jpg"),
               ]),
-              // const Expanded(
-              TOTCategoriesOrganism(
-                height: h * 0.55,
-                itemCount: 4,
+              const TOTPromotionOrganism(
+                hasButton: true,
+                productImage:
+                    "https://alkhbaz.totplatform.net/assets/catalog/0a841/8009/8009.jpg",
+              ),
+              const TOTPromotionOrganism(
+                hasBanner: true,
+                productImage:
+                    "https://alkhbaz.totplatform.net/assets/catalog/0a841/8009/8009.jpg",
+              ),
+              const TOTPromotionOrganism(
+                productImage:
+                    "https://alkhbaz.totplatform.net/assets/catalog/0a841/8009/8009.jpg",
+              ),
+              const TOTCategoriesOrganism(
+                itemCount: 3,
                 productImage:
                     "https://alkhbaz.totplatform.net/assets/catalog/0a841/8009/8009.jpg",
               ),

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class TotTryNowOrganinsm extends StatelessWidget {
@@ -35,17 +36,18 @@ class TotTryNowOrganinsm extends StatelessWidget {
                 borderRadius: const BorderRadius.all(
                   Radius.circular(10),
                 ),
-                child: Image.network(
+                child: CachedNetworkImage(
                   height: h * 0.15,
                   width: double.infinity,
                   fit: BoxFit.fitWidth,
-                  productImage ?? "",
-                  errorBuilder: (context, error, stackTrace) {
-                    return Image.network(
+                  imageUrl: productImage ?? "",
+                  errorWidget: (context, error, stackTrace) {
+                    return CachedNetworkImage(
                       height: h * 0.2,
                       width: double.infinity,
                       fit: BoxFit.fitWidth,
-                      "https://ps.w.org/replace-broken-images/assets/icon-256x256.png",
+                      imageUrl:
+                          "https://ps.w.org/replace-broken-images/assets/icon-256x256.png",
                     );
                   },
                 ),
