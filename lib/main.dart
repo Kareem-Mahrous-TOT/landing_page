@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tot_landing_page_widgets/core/theme/pallete.dart';
 
 import 'core/routes/app_router.dart';
 
@@ -25,6 +26,16 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         title: 'TOT Landing Pages',
         theme: ThemeData(
+          elevatedButtonTheme: const ElevatedButtonThemeData(
+            style: ButtonStyle(
+              iconColor: MaterialStatePropertyAll(
+                primary,
+              ),
+              // textStyle: MaterialStatePropertyAll(
+              //   TextStyle(color: orange),
+              // ),
+            ),
+          ),
           useMaterial3: true,
         ),
         routerConfig: allRoutes,

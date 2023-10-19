@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tot_landing_page_widgets/view/screens/pages/landing_page.dart';
 
-import '../../view/screens/components/content_comps/contact_us.dart';
+import '../../view/screens/components/content_comps/contact_us/contact_us.dart';
 import '../../view/screens/components/content_comps/faqs.dart';
 import '../../view/screens/components/content_comps/privacy_and_policy.dart';
 import '../../view/screens/components/content_comps/terms_and_conditoins.dart';
@@ -20,7 +20,7 @@ final GoRouter allRoutes = GoRouter(
   //   }
   // },
   navigatorKey: navigatorKey,
-  initialLocation: RoutePaths.landing,
+  initialLocation: RoutePaths.contentPage,
   routes: [
     GoRoute(
       path: RoutePaths.landing,
@@ -43,7 +43,7 @@ final GoRouter allRoutes = GoRouter(
     GoRoute(
       path: RoutePaths.privacyAndPolicy,
       builder: (BuildContext context, GoRouterState state) =>
-          const PrivacyAndPolicy(),
+          PrivacyAndPolicy(),
     ),
     GoRoute(
       path: RoutePaths.termsAndConditions,
