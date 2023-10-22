@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tot_landing_page_widgets/core/routes/router_paths.dart';
-import 'package:tot_landing_page_widgets/core/theme/pallete.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
+import '../../../core/routes/router_paths.dart';
 import '../components/content_comps/content_button.dart';
 
 class ContentPage extends StatelessWidget {
@@ -15,9 +15,11 @@ class ContentPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Settings",
-          style: TextStyle(color: black, fontSize: 18),
+          style: context.titleLarge.copyWith(
+            color: Colors.black,
+          ),
         ),
       ),
       backgroundColor: Colors.white70,

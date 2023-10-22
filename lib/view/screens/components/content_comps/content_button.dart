@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
 class TOTContentButtonMolecule extends StatelessWidget {
   const TOTContentButtonMolecule({
@@ -44,7 +45,8 @@ class TOTContentButtonMolecule extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(color: titleColor ?? Colors.black),
+                style: context.labelLarge
+                    .copyWith(color: titleColor ?? Colors.black),
               ),
               Icon(
                 Icons.arrow_forward_ios,

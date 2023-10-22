@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
 class ContactUsButtonMolecule extends StatelessWidget {
   const ContactUsButtonMolecule({
@@ -39,7 +40,7 @@ class ContactUsButtonMolecule extends StatelessWidget {
             ),
             Text(
               text ?? "Call us",
-              style: TextStyle(
+              style: context.titleLarge.copyWith(
                   fontSize: 20,
                   color: textColor ?? Colors.black,
                   fontWeight: FontWeight.w400),

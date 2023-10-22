@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tot_landing_page_widgets/view/screens/pages/landing_page.dart';
-
-import '../../view/screens/components/content_comps/contact_us/contact_us.dart';
-import '../../view/screens/components/content_comps/faqs.dart';
-import '../../view/screens/components/content_comps/privacy_and_policy.dart';
-import '../../view/screens/components/content_comps/terms_and_conditoins.dart';
+ 
+import '../../view/screens/components/content_comps/content_pages_expo.dart';
 import '../../view/screens/pages/content_page.dart';
 import 'router_paths.dart';
 
@@ -20,7 +17,7 @@ final GoRouter allRoutes = GoRouter(
   //   }
   // },
   navigatorKey: navigatorKey,
-  initialLocation: RoutePaths.contentPage,
+  initialLocation: RoutePaths.landing,
   routes: [
     GoRoute(
       path: RoutePaths.landing,
@@ -43,7 +40,7 @@ final GoRouter allRoutes = GoRouter(
     GoRoute(
       path: RoutePaths.privacyAndPolicy,
       builder: (BuildContext context, GoRouterState state) =>
-          PrivacyAndPolicy(),
+          const PrivacyAndPolicy(),
     ),
     GoRoute(
       path: RoutePaths.termsAndConditions,

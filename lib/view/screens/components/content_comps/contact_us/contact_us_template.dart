@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
+
 import 'contact_us_button.dart';
 
 class TOTContactUsTemplate extends StatelessWidget {
   const TOTContactUsTemplate({
     super.key,
     this.assetImage,
-    this.titleLarge,
+    this.title,
     this.description,
     this.imageHeight,
     this.imageWidth,
@@ -23,7 +25,7 @@ class TOTContactUsTemplate extends StatelessWidget {
     this.iconColor1,
   });
   final String? assetImage;
-  final String? titleLarge;
+  final String? title;
   final String? description;
   final double? imageHeight;
   final double? imageWidth;
@@ -56,8 +58,8 @@ class TOTContactUsTemplate extends StatelessWidget {
         Column(
           children: [
             Text(
-              titleLarge ?? "How can we help you?",
-              style: TextStyle(
+              title ?? "How can we help you?",
+              style: context.titleLarge.copyWith(
                 color: titleColor ?? Colors.black,
                 fontSize: 24,
               ),
@@ -66,8 +68,10 @@ class TOTContactUsTemplate extends StatelessWidget {
               textAlign: TextAlign.center,
               description ??
                   "if you're having a problem, we're here to help you so please get in touch with us",
-              style: TextStyle(
-                  color: descriptionColor ?? Colors.grey, fontSize: 19),
+              style: context.bodyLarge.copyWith(
+                color: descriptionColor ?? Colors.grey,
+                // fontSize: 19,
+              ),
             ),
           ],
         ),

@@ -15,7 +15,7 @@ class ContactUs extends StatelessWidget {
       ),
       body: TOTContactUsTemplate(
         assetImage: "assets/tot_icon.png",
-        titleLarge: "How can we help you?",
+        title: "How can we help you?",
         description:
             "if you're having a problem, we're here to help you so please get in touch with us",
         onPressedButton1: () {
@@ -33,9 +33,6 @@ class ContactUs extends StatelessWidget {
           final Uri dialLaunch = Uri(
             scheme: 'tel',
             path: '99999',
-            // queryParameters: <String, String>{
-            //   'body': Uri.encodeComponent('Example Subject & Symbols are allowed!'),
-            // },
           );
           launchUrl(dialLaunch);
         },

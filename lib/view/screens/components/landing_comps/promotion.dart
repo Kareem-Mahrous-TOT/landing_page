@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
 class TOTPromotionOrganism extends StatelessWidget {
   const TOTPromotionOrganism({
@@ -73,8 +74,8 @@ class TOTPromotionOrganism extends StatelessWidget {
                   onPressed: onPressed,
                   child: Text(
                     "Order Now",
-                    style:
-                        TextStyle(color: buttonChildrenColor ?? Colors.white),
+                    style: context.labelLarge
+                        .copyWith(color: buttonChildrenColor ?? Colors.white),
                   ),
                 ),
               )
@@ -92,7 +93,7 @@ class TOTPromotionOrganism extends StatelessWidget {
                         onPressed: onPressed,
                         child: Text(
                           "Order Now",
-                          style: TextStyle(
+                          style: context.labelLarge.copyWith(
                               color: buttonChildrenColor ?? Colors.white),
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tot_atomic_design/tot_atomic_design.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
 class TOTCategoriesOrganism extends StatelessWidget {
   const TOTCategoriesOrganism({
@@ -60,9 +61,11 @@ class TOTCategoriesOrganism extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Text(
+                        Text(
                           "Basbousa",
-                          style: TextStyle(fontSize: 18),
+                          style: context.labelLarge.copyWith(
+                              // fontSize: 18,
+                              ),
                         ),
                       ]),
                 ),

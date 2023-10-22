@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:tot_landing_page_widgets/core/constants/text_style.dart';
 
 class TotTryNowOrganinsm extends StatelessWidget {
   const TotTryNowOrganinsm({
@@ -59,11 +60,14 @@ class TotTryNowOrganinsm extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(productName,
-                      style: TextStyle(
-                          color: tryNowColor ?? Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500)),
+                  Text(
+                    productName,
+                    style: context.labelLarge.copyWith(
+                      color: tryNowColor ?? Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                   ElevatedButton(
                     onPressed: onPressed,
                     style: ElevatedButton.styleFrom(
@@ -72,7 +76,7 @@ class TotTryNowOrganinsm extends StatelessWidget {
                       children: [
                         Text(
                           "Order Now",
-                          style: TextStyle(
+                          style: context.labelLarge.copyWith(
                               color: buttonChildrenColor ?? Colors.white),
                         ),
                         Icon(Icons.play_arrow,
